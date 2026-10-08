@@ -1,0 +1,141 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #dbeafe, #f3e8ff);
+    margin: 0;
+    min-height: 100vh;
+    padding: 40px 16px;
+}
+
+.container {
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 25px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(80, 60, 130, 0.18);
+}
+
+h1 {
+    text-align: center;
+    color: #6d28d9;
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+
+.input-area {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+#taskInput {
+    width: 100%;
+    min-width: 0;
+    padding: 13px;
+    border: 2px solid #c4b5fd;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+#taskInput:focus {
+    border-color: #7c3aed;
+}
+
+#addBtn {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background: #7c3aed;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#addBtn:hover {
+    background: #5b21b6;
+}
+
+#taskList {
+    list-style: none;
+    padding: 0;
+    margin: 22px 0 0;
+    width: 100%;
+}
+
+#taskList li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    min-width: 0;
+    margin-bottom: 12px;
+    padding: 12px;
+    background: #f5f3ff;
+    border: 1px solid #ddd6fe;
+    border-radius: 10px;
+}
+
+#taskList li span {
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    font-size: 15px;
+}
+
+#taskList li label {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 7px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.yes-label {
+    color: #166534;
+    background: #dcfce7;
+}
+
+.no-label {
+    color: #991b1b;
+    background: #fee2e2;
+}
+
+#taskList input[type="checkbox"] {
+    margin: 0;
+    accent-color: #16a34a;
+    cursor: pointer;
+}
+
+#taskList .no-label input[type="checkbox"] {
+    accent-color: #dc2626;
+}
+
+@media (max-width: 380px) {
+    .container {
+        padding: 15px;
+    }
+
+    #taskList li {
+        gap: 5px;
+        padding: 8px;
+    }
+
+    #taskList li label {
+        gap: 3px;
+        padding: 5px;
+        font-size: 11px;
+    }
+}
